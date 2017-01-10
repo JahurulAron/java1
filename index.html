@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+      .clr{
+          color:red;
+      }  
+        
+.kk{
+    background-color:black;
+    width:50%;
+    height: 50px;
+   
+}
+.kk li{
+   
+  width:100px;
+margin: 15px;
+  
+    color:white;
+    opacity: 50%
+        
+    text-align: center;
+      display:inline-block;
+}
+
+a{
+    text-decoration: none;
+}
+#demo1,#demo2,#demo3,#demo4,#demo5,#demo6, #demo7, #demo8{
+    margin-left: 50px;
+}
+
+
+.clr1{
+    color:red;
+
+}
+.clr2{
+    color:blue;
+
+}
+        </style>
+    </head>
+<body>
+
+<!-- html start-->
+
+<br/>
+<br/>
+<div class="kk" >
+	<ul>
+		<LI> <a href="">Start</a></li>
+		<LI> <a href=""> About</a></li>
+		<LI> <a href="">Servics</a></li>
+        <LI> <a href="">Contact</a></li>
+      
+	</ul>
+</div>
+
+
+
+<!--övning-1   -->
+<h2><font color="red">Övning-1</font></h2>
+<p id="demo1"></p> 
+<script>
+document.getElementById("demo1").innerHTML = " <h1>SPO 16 </h1>";
+</script>
+
+<!--övning-2   -->
+<h2><font color="blue">Övning-2</font></h2>
+<p id="demo2"></p> 
+
+<script> //<h1>JavaScript Loops</h1>
+var text = "";
+var i;
+for (i = 1; i < 6; i++) {
+    text +=  + i + ". Hello<br>";
+}
+document.getElementById("demo2").innerHTML = text;
+
+</script>
+
+<!--övning-3   -->
+
+<h2><font color="red">Övning-3</font></h2>
+
+<button onclick="myFunction()">Give me some hello's</button>
+<p id="demo3"></p> 
+
+<script> //<h1>JavaScript Loops</h1>
+var text = "";
+var i;
+for (i = 1; i < 6; i++) {
+    text +=  + i + ". Hello<br>";
+}
+
+function myFunction() {
+    document.getElementById("demo3").innerHTML = text;
+}
+</script>
+
+<!--övning-4   -->
+<h2><font color="blue">Övning-4</font></h2>
+<p id="demo4"></p> 
+
+<script> //<h1>JavaScript Loops</h1>
+var text4 = "";
+var p=30;
+do {
+    text4 +=  + p + ". Kalle Kula<br>";
+    p++;
+} 
+while(p<41);
+
+document.getElementById("demo4").innerHTML = text4;
+
+</script>
+
+
+<!--övning-5  -->
+
+<h2><font color="red">Övning-5</font></h2>
+<p id="demo5"></p> 
+
+<script> //<h1>JavaScript Loops</h1>
+var text5 = "";
+var p;
+
+for (p = 1; p < 8; p++) {
+    if(p===2){
+ text5 += p+'<span class="clr1">'   + ". Hallå<br>" +'</span>';
+    }
+    else if(p===3){
+ text5   += p+'<span class="clr2">' + ". Hallå<br>" +'</span>';
+    }
+    else{
+text5 +=   p + ". Hallå<br>";
+    }
+    
+    
+
+}
+var x=document.getElementById("demo5").innerHTML = text5;
+
+</script>
+
+<!-- html start för övnin-6-->
+<h2><font color="blue">Övning-5</font></h2>
+
+<input type ="" id= "s1" > <br/> +<br/>
+
+<input type="" id ="s2" value=""><br/>
+
+ 
+<button onclick="add()">=</button><br/>
+<br/>
+<br/>
+
+
+<p id="demo6"></p> 
+
+
+<script>
+
+function add() {
+
+var n1, n2,n3;
+
+//n1 =Number( document.getElementById("s1").value);
+n1=Number(s1.value);
+n2 = Number(document.getElementById("s2").value);
+n3=n1+n2;
+//n3=(+n1)+(+n2);
+
+document.getElementById("demo6").innerHTML=n3;
+
+}
+
+</script>
+
+ <!-- Start-- Ovning-7-->
+ <h2><font color="red">Övning-7</font></h2>
+    <button onclick="date()" >Dagar till julaftons?</button>
+            <p id="demo7"></p>
+
+    <script>
+   function date() {
+    var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+var firstDate = new Date();
+var secondDate = new Date(2016,11,25);
+
+var diffDays = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime())/(oneDay)));
+
+    document.getElementById("demo7").innerHTML = "endest	" +diffDays+  "	dagar	kvar nu";;
+}
+ 
+    </script>
+
+ <!--övning-8 start   -->
+
+<h2><font color="red">Övning-8</font></h2>
+
+<button onclick="myFunction()">Give me one good random number</button>
+<p id="demo8"></p> 
+
+<script> //<h1>JavaScript Loops</h1>
+
+function myFunction() {
+   var z= document.getElementById("demo8").innerHTML = Math.ceil((Math.random() * 10000) + 1);// floor
+}
+
+</script>
+</body>
+</html>
